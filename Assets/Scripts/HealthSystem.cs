@@ -5,9 +5,11 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour
 {
     public float MaxHealth, health;
+    public PlayerHUD hud;
     // Start is called before the first frame update
     void Start()
     {
+        hud = GetComponent<PlayerHUD>();
         if (gameObject.tag == "Player")
         {
             MaxHealth = 100;
@@ -27,11 +29,19 @@ public class HealthSystem : MonoBehaviour
     void Update()
     {
         checkStatus();
+
+        //tempp
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Damage(5f);
+        }
+        //
     }
 
     public void Damage(float damageAmount)
     {
         health -= damageAmount;
+        hud.SetHealthBar();
     }
     public void checkStatus()
     {
