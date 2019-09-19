@@ -101,10 +101,10 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 2.67
+        intensity: 0.83
         threshold: 0.97
-        softKnee: 0.267
-        radius: 2.18
+        softKnee: 0.152
+        radius: 4.03
         antiFlicker: 1
       lensDirt:
         texture: {fileID: 2800000, guid: a2960ffde020f27409e070d92fb2e00b, type: 3}
@@ -135,9 +135,9 @@ MonoBehaviour:
       colorWheels:
         mode: 1
         log:
-          slope: {r: 1, g: 0.9070708, b: 0.7078559, a: 0}
-          power: {r: 1, g: 0.9369323, b: 0.70001245, a: 0}
-          offset: {r: 1, g: 0.7798804, b: 0.2786193, a: 0}
+          slope: {r: 1, g: 0.89170724, b: 0.6942903, a: 0}
+          power: {r: 1, g: 0.9411125, b: 0.86037266, a: 0}
+          offset: {r: 1, g: 0.9604842, b: 0.5222831, a: 0}
         linear:
           lift: {r: 0, g: 0, b: 0, a: 0}
           gamma: {r: 0, g: 0, b: 0, a: 0}

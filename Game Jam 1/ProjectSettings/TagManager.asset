@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
+  - Enemy
+  - Projectile
+  - GenericEnemy
   layers:
   - Default
   - TransparentFX
