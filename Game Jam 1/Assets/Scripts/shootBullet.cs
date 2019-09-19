@@ -5,9 +5,8 @@ using UnityEngine;
 public class shootBullet : MonoBehaviour
 {
     public GameObject bulletEmitter;
-    public GameObject projectile;
     public float bulletSpeed = 10;
-
+    public GameObject projectile;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +29,9 @@ public class shootBullet : MonoBehaviour
 
             Rigidbody temporary_rigidbody;
             temporary_rigidbody = temporary_bullet_handler.GetComponent<Rigidbody>();
-            temporary_rigidbody.AddForce(transform.forward * bulletSpeed);
+            temporary_rigidbody.velocity = Camera.main.transform.forward * 100;
 
             Destroy(temporary_bullet_handler, 10.0f);
-
-
-
             //GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
             // bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
 

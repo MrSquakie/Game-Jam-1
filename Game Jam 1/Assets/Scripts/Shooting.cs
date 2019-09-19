@@ -5,6 +5,10 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public Camera playerCam;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = playerCam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+
             Debug.Log("Clicked");
             if (Physics.Raycast(ray, out hit))
             {
@@ -31,7 +36,13 @@ public class Shooting : MonoBehaviour
 
             }
             else
-                print("I'm looking at nothing!");
+            { 
+              print("I'm looking at nothing!");
+            }
+
         }
+
+
+
     }
 }

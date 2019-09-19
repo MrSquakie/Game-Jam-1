@@ -385,7 +385,6 @@
 "Assets\Assets\Standard Assets\Vehicles\Car\Scripts\SkidTrail.cs"
 "Assets\Assets\Standard Assets\Vehicles\Car\Scripts\Suspension.cs"
 "Assets\Assets\Standard Assets\Vehicles\Car\Scripts\WheelEffects.cs"
-Assets\HealthSystem.cs
 Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs
 Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs
 Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs
@@ -432,4 +431,6 @@ Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs
 Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs
 Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs
 Assets\Scripts\CreateObjecctonShoot.cs
+Assets\Scripts\HealthSystem.cs
+Assets\Scripts\shootBullet.cs
 Assets\Scripts\Shooting.cs

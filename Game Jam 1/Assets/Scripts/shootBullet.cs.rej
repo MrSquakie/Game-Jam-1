@@ -1,0 +1,9 @@
+diff a/shootBullet.cs b/shootBullet.cs	(rejected hunks)
+@@ -0,6 +0,7 @@
+ public class shootBullet : MonoBehaviour
+ {
+     public GameObject bulletEmitter;
++    public GameObject projectile;
+     public float bulletSpeed = 10;
+ 
+     // Start is called before the first frame update
