@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 1
-  controlID: 39563
+  controlID: 47259
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 39564
+  controlID: 47260
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 494}
   m_MaxSize: {x: 14006, y: 14044}
   vertical: 1
-  controlID: 39534
+  controlID: 47237
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,9 +220,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 77.158714, y: 23.58676, z: -98.1833}
+    m_Target: {x: 85.469475, y: 31.544367, z: -165.85228}
     speed: 2
-    m_Value: {x: 77.158714, y: 23.58676, z: -98.1833}
+    m_Value: {x: 85.469475, y: 31.544367, z: -165.85228}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -251,9 +251,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.43860468, y: 0.08829192, z: -0.043160897, w: -0.89350444}
+    m_Target: {x: -0.00056279404, y: -0.9938138, z: 0.11259251, w: -0.007197599}
     speed: 2
-    m_Value: {x: -0.4385208, y: 0.08827503, z: -0.04315264, w: -0.8933335}
+    m_Value: {x: -0.0005626829, y: -0.99361753, z: 0.11257028, w: -0.0071961773}
   m_Size:
     m_Target: 54.252445
     speed: 2
@@ -263,8 +263,8 @@ MonoBehaviour:
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1.3
-    m_SpeedNormalized: 0.6700003
+    m_Speed: 1.6
+    m_SpeedNormalized: 0.8200002
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 272}
   m_MaxSize: {x: 14006, y: 10022}
   vertical: 0
-  controlID: 39485
+  controlID: 47189
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -464,20 +464,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials/branches
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials/branches
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Squakie\Documents\GitHub\Game-Jam-1\Game Jam 1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 67}
-    m_SelectedIDs: 50700100
-    m_LastClickedID: 94288
-    m_ExpandedIDs: 0000000020770000488700008c8700008a930000c4930000c46b010000ca9a3b
+    m_SelectedIDs: 20770000
+    m_LastClickedID: 30496
+    m_ExpandedIDs: 0000000020770000488700008c8700008a930000c493000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -530,9 +530,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 087efdff
-    m_LastClickedInstanceID: -164344
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 769e0000
+    m_LastClickedInstanceID: 40566
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300004a3000006e3f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 32}
+      scrollPos: {x: 0, y: 564}
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: a8defdffb6defdffecfafdff6211feff8c3bfeff244cffff167d0000
