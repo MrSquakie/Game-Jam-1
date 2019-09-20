@@ -7,6 +7,8 @@ public class shootBullet : MonoBehaviour
     public GameObject bulletEmitter;
     public GameObject projectile;
     public float bulletSpeed = 10;
+    public GameObject target;
+    public GameObject Character;
 
     // Start is called before the first frame update
     void Start()
@@ -22,22 +24,47 @@ public class shootBullet : MonoBehaviour
 
     public void Clicked()
     {
+        Vector3 tempTransform;
+        tempTransform = bulletEmitter.transform.position = Character.transform.position;
+
+        Quaternion tempRotation;
+        tempRotation = bulletEmitter.transform.rotation = Character.transform.rotation;
+
+
         if (Input.GetMouseButtonDown(0))
         {
             GameObject temporary_bullet_handler;
-            temporary_bullet_handler = Instantiate(projectile, bulletEmitter.transform.position, bulletEmitter.transform.rotation) as GameObject;
+            temporary_bullet_handler = Instantiate(projectile, tempTransform, tempRotation) as GameObject;
+            //temporary_bullet_handler = Instantiate(projectile, bulletEmitter.transform.position, bulletEmitter.transform.rotation) as GameObject;
+            temporary_bullet_handler.transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up) * Quaternion.Euler(90f, 0f, 0f);
             //temporary_bullet_handler.transform.Rotate(Vector3.left * 90);
 
             Rigidbody temporary_rigidbody;
             temporary_rigidbody = temporary_bullet_handler.GetComponent<Rigidbody>();
-            temporary_rigidbody.AddForce(transform.forward * bulletSpeed);
+            temporary_rigidbody.velocity = Camera.main.transform.forward * 60f;
 
             Destroy(temporary_bullet_handler, 10.0f);
-
-
-
             //GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
             // bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+
+
+            /*
+            if (Input.GetMouseButtonDown(0))
+            {
+                GameObject temporary_bullet_handler;
+                temporary_bullet_handler = Instantiate(projectile, bulletEmitter.transform.position, bulletEmitter.transform.rotation) as GameObject;
+                temporary_bullet_handler.transform.Rotate(Vector3.left * 90);
+
+                Rigidbody temporary_rigidbody;
+                temporary_rigidbody = temporary_bullet_handler.GetComponent<Rigidbody>();
+                temporary_rigidbody.AddForce(transform.forward * bulletSpeed);
+
+                Destroy(temporary_bullet_handler, 10.0f);
+
+                //GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+                // bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+
+            }*/
 
         }
 
