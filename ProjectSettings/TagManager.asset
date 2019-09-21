@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Projectile
   - GenericEnemy
+  - Goal
   layers:
   - Default
   - TransparentFX

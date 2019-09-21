@@ -3,50 +3,49 @@ using UnityEngine.AI;
 
 public class EnemyNav : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject goal;
+    public GameObject player, goal;
     public NavMeshAgent agent;
-    public Shooting hit; //doesn't work
-    private bool follow;
+    /*public Shooting hit;*/
+    private bool follow, stay;
     private void OnTriggerEnter(Collider other)
     {
-        //when enemy runs collides with player/castle, enemy stops
-        if(player)
+        //When enemy triggers goal, it stops and stays.
+        Debug.Log("Enemy collided with: "+other.gameObject.tag);
+        if(other.gameObject.tag == "Goal")
+        {
+            agent.isStopped = true;
+            stay = true;
+        }
+
+        //When enemy triggers player, it stops.
+        if(other.gameObject.tag == "Player")
         {
             agent.isStopped = true;
         }
-
-        if(goal)
-        {
-            agent.isStopped = true;
-        }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if(player)
-        {
-            //Attack
-        }
-
-        if(goal)
-        {
-            //Attack
-        }
+            
     }
     private void OnTriggerExit(Collider player)
     {
-        //if player moves away from enemy after colliding, enemy follows
-        follow = true;
-        agent.isStopped = false;
+        //If player moves away from enemy after colliding, enemy follows
+        if (stay == false)
+        {
+            follow = true;
+            agent.isStopped = false;
+        }
+    }
+    void Start()
+    {
+        stay = false;
+        follow = false;
     }
     void Update()
     {
-        
-        /*if (hit)
+        //Below: Attempt at making enemy follow when hit.
+        /*if (hit.transform.name == name)
         {
+            Debug.Log("hit");
             follow = true;
-        }*/ //doesn't work
+        }*/
 
         if(follow == true)
         {
