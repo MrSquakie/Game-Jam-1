@@ -5,7 +5,7 @@ public class EnemyNav : MonoBehaviour
 {
     public GameObject player, goal;
     public NavMeshAgent agent;
-    /*public Shooting hit;*/
+    //public HealthSystem HealthSystem; //pull damageAmount
     private bool follow, stay;
     private void OnTriggerEnter(Collider other)
     {
@@ -24,15 +24,19 @@ public class EnemyNav : MonoBehaviour
         }
             
     }
-    private void OnTriggerExit(Collider player)
+    private void OnTriggerExit(Collider other)
     {
         //If player moves away from enemy after colliding, enemy follows
-        if (stay == false)
+        if (other.gameObject.tag == "Player")
         {
-            follow = true;
-            agent.isStopped = false;
+            if (stay == false)
+            {
+                follow = true;
+                agent.isStopped = false;
+            }
         }
     }
+
     void Start()
     {
         stay = false;
@@ -40,8 +44,8 @@ public class EnemyNav : MonoBehaviour
     }
     void Update()
     {
-        //Below: Attempt at making enemy follow when hit.
-        /*if (hit.transform.name == name)
+        //Below: (Not Working) when take damage, follow player.
+        /*if (damageAmount >= 1)
         {
             Debug.Log("hit");
             follow = true;
