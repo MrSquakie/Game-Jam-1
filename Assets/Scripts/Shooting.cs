@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public Camera playerCam;
+    public float TargetDistance;
 
 
 
@@ -30,10 +31,11 @@ public class Shooting : MonoBehaviour
 
             Debug.Log("Clicked");
             if (Physics.Raycast(ray, out hit))
-            {
+            { 
+
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                 print("I'm looking at " + hit.transform.name);
-
+                TargetDistance = hit.distance;
             }
             else
             { 
