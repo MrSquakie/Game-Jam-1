@@ -21,7 +21,7 @@ public class PlayerHUD : MonoBehaviour
         SetHealthBar();
     }
 
-    public void SetHealthBar()
+    void SetHealthBar()
     {
         slider.value = healthSystem.health / healthSystem.MaxHealth;
     }
