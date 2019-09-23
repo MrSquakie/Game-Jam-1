@@ -36,13 +36,24 @@ public class EnemyNav : MonoBehaviour
     }
 	private void Attacking()
 	{
-		if (Vector3.Distance(player.transform.position, this.transform.position) < 3)
+		if (Vector3.Distance(player.transform.position, this.transform.position) <= 3)
 		{
 			Debug.Log("Attacking");
 			follow = false;
 			anim.SetBool("Idle",false);
 			anim.SetBool("IsWalking",false);
 			anim.SetBool("Attacking",true);
+		}
+	}
+	private void NotAttacking()
+	{
+		if (Vector3.Distance(player.transform.position, this.transform.position) > 3)
+		{
+			Debug.Log("NotAttacking");
+			follow = true;
+			anim.SetBool("Idle",false);
+			anim.SetBool("IsWalking",true);
+			anim.SetBool("Attacking",false);
 		}
 	}
     private void OnTriggerExit(Collider other)
@@ -74,6 +85,7 @@ public class EnemyNav : MonoBehaviour
             follow = true;
         }*/
 		Attacking();
+		NotAttacking();
         if(follow == true)
         {
             //follows player
