@@ -27,7 +27,7 @@ public class ProjectileInteraction : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 rb.useGravity = false;
                 rb.isKinematic = true;
-
+                gameObject.transform.parent = collision.transform;
                 if (collision.gameObject.GetComponent<HealthSystem>()) //if collision object has healthSystem component
                 {
                     HealthSystem healthSystem = collision.gameObject.GetComponent<HealthSystem>();
