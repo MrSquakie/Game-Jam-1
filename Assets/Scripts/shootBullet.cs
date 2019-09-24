@@ -8,10 +8,11 @@ public class shootBullet : MonoBehaviour
     public float bulletSpeed = 10;
     public GameObject projectile;
     public GameObject target;
+	static Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class shootBullet : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+			anim.SetBool("Fire",true);
             GameObject temporary_bullet_handler;
             temporary_bullet_handler = Instantiate(projectile, bulletEmitter.transform.position, bulletEmitter.transform.rotation) as GameObject;
             temporary_bullet_handler.transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward, Camera.main.transform.up) * Quaternion.Euler(90f, 0f, 0f);
@@ -38,6 +40,10 @@ public class shootBullet : MonoBehaviour
             // bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
 
         }
+		if (Input.GetMouseButtonUp(0))
+		{
+			anim.SetBool("Fire",false);
+		}
 
     }
 

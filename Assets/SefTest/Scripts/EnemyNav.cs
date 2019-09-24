@@ -44,10 +44,7 @@ public class EnemyNav : MonoBehaviour
 			anim.SetBool("IsWalking",false);
 			anim.SetBool("Attacking",true);
 		}
-	}
-	private void NotAttacking()
-	{
-		if (Vector3.Distance(player.transform.position, this.transform.position) > 3)
+		else
 		{
 			Debug.Log("NotAttacking");
 			follow = true;
@@ -84,8 +81,8 @@ public class EnemyNav : MonoBehaviour
             Debug.Log("hit");
             follow = true;
         }*/
+		
 		Attacking();
-		NotAttacking();
         if(follow == true)
         {
             //follows player
