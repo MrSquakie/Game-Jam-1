@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.24750803, g: 0.46064386, b: 0.509434, a: 1}
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
   m_LinearFogStart: 117.3
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: b6fcd92107f1d8e4fabf81cdec6f62bf, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 3876d0e183013044aab5adba683217d7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1845,7 +1845,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.86885387, b: 0.7688679, a: 1}
+  m_Color: {r: 0.07943217, g: 0.09298349, b: 0.14150941, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1902,13 +1902,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286634879}
-  m_LocalRotation: {x: 0.0075546443, y: -0.3651999, z: 0.76409787, w: 0.5317202}
+  m_LocalRotation: {x: -0.19503425, y: -0.047502108, z: 0.84555286, w: 0.49471772}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 34.481003, y: -27.202002, z: 101.746}
+  m_LocalEulerAnglesHint: {x: -6.4680004, y: -22.286001, z: 120.61301}
 --- !u!123 &286634882
 LensFlare:
   m_ObjectHideFlags: 0
@@ -4105,6 +4105,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 4023916253502719312, guid: e8df84dfbb0fb774c9aa549bbaa8e29b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4023916253502822768, guid: e8df84dfbb0fb774c9aa549bbaa8e29b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4175,6 +4180,16 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 2140571371}
+    - target: {fileID: 4023916252282256236, guid: e8df84dfbb0fb774c9aa549bbaa8e29b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023916253502719314, guid: e8df84dfbb0fb774c9aa549bbaa8e29b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4023916253568943925, guid: e8df84dfbb0fb774c9aa549bbaa8e29b,
         type: 3}
       propertyPath: projectile
@@ -4183,68 +4198,6 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8df84dfbb0fb774c9aa549bbaa8e29b, type: 3}
---- !u!1 &778144774 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4023916253502719312, guid: e8df84dfbb0fb774c9aa549bbaa8e29b,
-    type: 3}
-  m_PrefabInstance: {fileID: 778144773}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &778144775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778144774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 32850f4ef8ac66648acc1aa411b4a0ef, type: 2}
---- !u!20 &778144776
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778144774}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!1001 &779851175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8566,6 +8519,25 @@ Transform:
   m_Father: {fileID: 318402659}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1815429720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4023916253502719314, guid: e8df84dfbb0fb774c9aa549bbaa8e29b,
+    type: 3}
+  m_PrefabInstance: {fileID: 778144773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1815429725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815429720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 32850f4ef8ac66648acc1aa411b4a0ef, type: 2}
 --- !u!4 &1817045818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7173c2ccddc9b8b45b46f613abf5018c,
@@ -13249,6 +13221,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590351896441197698, guid: 55b9ac0f81b34bd438cb149d0120b13c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590351896441197701, guid: 55b9ac0f81b34bd438cb149d0120b13c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55b9ac0f81b34bd438cb149d0120b13c, type: 3}
