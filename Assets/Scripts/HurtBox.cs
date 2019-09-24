@@ -14,12 +14,12 @@ public class HurtBox : MonoBehaviour
     // Start is called before the first frame update
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "AttackZone")
         {
             if (playerHealth)
             {
                 print("Smack");
-                playerHealth.Damage(2f);
+                playerHealth.Damage(5f);
             }
         }
        
