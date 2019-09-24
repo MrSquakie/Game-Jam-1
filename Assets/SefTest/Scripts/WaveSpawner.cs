@@ -13,6 +13,7 @@ public class WaveSpawner : MonoBehaviour
         public int count;
         public float rate;
     }
+    public bool wavesComplete;
 
     public Wave[] waves;
     private int nextWave = 0;
@@ -32,6 +33,7 @@ public class WaveSpawner : MonoBehaviour
             Debug.LogError("No spawn points referenced.");
         }
 
+        wavesComplete = false;
         waveCountdown = timeBetweenWaves;
     }
 
@@ -76,7 +78,8 @@ public class WaveSpawner : MonoBehaviour
         if(nextWave + 1 > waves.Length - 1)
         {
             //Completed wave
-            nextWave = 0;
+            //nextWave = 0;
+            wavesComplete = true;
             Debug.Log("ALL WAVES COMPLETE! Looping...");
         }
 
