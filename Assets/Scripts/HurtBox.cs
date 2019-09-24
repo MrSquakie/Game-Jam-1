@@ -5,19 +5,23 @@ using UnityEngine;
 public class HurtBox : MonoBehaviour
 {
     public HealthSystem playerHealth;
-    void Start()
+    public void Start()
     {
-        
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
+        print("HUrted");
     }
+
     // Start is called before the first frame update
     void OnTriggerEnter(Collider other)
     {
-        print("Player!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        playerHealth = other.gameObject.GetComponentInParent<HealthSystem>();
-        if (playerHealth)
+        if (other.gameObject.tag == "Player")
         {
-            print("Smack");
-            playerHealth.Damage(5f);
+            if (playerHealth)
+            {
+                print("Smack");
+                playerHealth.Damage(2f);
+            }
         }
+       
     }
 }
