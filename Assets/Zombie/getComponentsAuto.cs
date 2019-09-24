@@ -5,9 +5,9 @@ using UnityEngine;
 public class getComponentsAuto : MonoBehaviour
 {
     // Start is called before the first frame update
-    private GameObject player;
-    private GameObject goal;
-    private EnemyNav nav;
+    public GameObject player;
+    public GameObject goal;
+    public EnemyNav nav;
     void Start()
     {
         nav = GetComponent<EnemyNav>();
