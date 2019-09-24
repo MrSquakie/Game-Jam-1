@@ -9,6 +9,9 @@ TagManager:
   - Projectile
   - GenericEnemy
   - Goal
+  - AttackZone
+  - StopZone
+  - HitBox
   layers:
   - Default
   - TransparentFX

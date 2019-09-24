@@ -12,6 +12,7 @@ public class navMeshUpdated : MonoBehaviour
     public float seconds;
     public Animator anim;
     public float extraRotationSpeed;
+    public HealthSystem playerHealth;
 
     private bool stop;
     private bool attack;
@@ -22,7 +23,9 @@ public class navMeshUpdated : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = playerObject.transform;
+        playerHealth = playerObject.GetComponent<HealthSystem>();
         goal = GameObject.FindGameObjectWithTag("Goal").transform;
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
@@ -95,7 +98,6 @@ public class navMeshUpdated : MonoBehaviour
         {
             attack = false;
             stop = false;
-
         }
     }
     void Attack()
