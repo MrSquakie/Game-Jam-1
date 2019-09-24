@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  projectileDamage: 5
+  projectileDamage: 34
 --- !u!1001 &158929522713974192
 PrefabInstance:
   m_ObjectHideFlags: 0

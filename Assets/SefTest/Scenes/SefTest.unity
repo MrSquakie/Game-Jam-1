@@ -191,19 +191,19 @@ PrefabInstance:
         type: 3}
       propertyPath: waves.Array.data[1].enemy
       value: 
-      objectReference: {fileID: 7393380959906414416, guid: 2dfe550615895b84a95f36a1c6424005,
+      objectReference: {fileID: 5684844081471078922, guid: 056e957293a3cad4895dd516b78c3175,
         type: 3}
     - target: {fileID: 6381681793824797238, guid: 2d8f479efda31fc4091b26034f0360d8,
         type: 3}
       propertyPath: waves.Array.data[0].enemy
       value: 
-      objectReference: {fileID: 7393380959906414416, guid: 2dfe550615895b84a95f36a1c6424005,
+      objectReference: {fileID: 5684844081471078922, guid: 056e957293a3cad4895dd516b78c3175,
         type: 3}
     - target: {fileID: 6381681793824797238, guid: 2d8f479efda31fc4091b26034f0360d8,
         type: 3}
       propertyPath: waves.Array.data[2].enemy
       value: 
-      objectReference: {fileID: 7393380959906414416, guid: 2dfe550615895b84a95f36a1c6424005,
+      objectReference: {fileID: 5684844081471078922, guid: 056e957293a3cad4895dd516b78c3175,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8f479efda31fc4091b26034f0360d8, type: 3}
@@ -344,15 +344,15 @@ PrefabInstance:
       propertyPath: m_LayerMask.m_Bits
       value: 55
       objectReference: {fileID: 0}
-    - target: {fileID: 8364535745665482433, guid: 8393f4c286237a34eb2278af9449c5c9,
-        type: 3}
-      propertyPath: m_Name
-      value: Test Environment
-      objectReference: {fileID: 0}
     - target: {fileID: 2377091530641606506, guid: 8393f4c286237a34eb2278af9449c5c9,
         type: 3}
       propertyPath: m_NavMeshData
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364535745665482433, guid: 8393f4c286237a34eb2278af9449c5c9,
+        type: 3}
+      propertyPath: m_Name
+      value: Test Environment
       objectReference: {fileID: 0}
     - target: {fileID: 8364535745665482436, guid: 8393f4c286237a34eb2278af9449c5c9,
         type: 3}
@@ -419,11 +419,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7936811029146952266, guid: 4e16ef9c99ad50144aeddea70111f998,
-        type: 3}
-      propertyPath: m_Name
-      value: Test Castle
-      objectReference: {fileID: 0}
     - target: {fileID: 7936811029146952260, guid: 4e16ef9c99ad50144aeddea70111f998,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -478,6 +473,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936811029146952266, guid: 4e16ef9c99ad50144aeddea70111f998,
+        type: 3}
+      propertyPath: m_Name
+      value: Test Castle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e16ef9c99ad50144aeddea70111f998, type: 3}
